@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Block */
+header {
+  background-color: darkcyan;
+  color: cyan;
+  padding: 30px;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  display: inline-block;
+  float: left;
+  color: cyan;
+  font-size: 42px;
+  position: relative;
+  align-items: center;
+  bottom:50%%;
+}
+
+nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  float: right;
+  padding-top: 9px;
+  font-size: 20px;
+}
+
+header nav ul li {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+header nav ul li a {
+  color: cyan;
+  font-size: 20px;
+}
+
+/* Main Block */
+
+/* subheader */
+img {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+.subheader {
+  background-image: url(../images/subheader2.jpeg);
+  height: 15vh;
+  background-size: cover;
+  background-position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.subheader h2 {
+  display: block;
+  position: absolute;
+  color: darkcyan;
+  float: right;
+  margin-right: 2%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+/* Main Block */ 
+/* About Me Block */
+.about-me-text {
+  width: 61vw;
+  padding: 10px;
+  display: inline-block;
+  text-align: start;
+  color: #025555; 
+}
+
+/* Work Block */
+.work {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 15px;
+  justify-content: start;
+  padding: 15px;
+}
+
+.work-examples {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-content: start;
+  padding: 0px;
+  width: 75%;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  padding: 0px;
+  border: 5px solid cyan;
+  margin: 10px;
+  width: 30vw;
+  height: 20vw;
+  background: darkcyan;
+}
+
+.card:hover {
+  box-shadow: 10px 10px 10px 10px darkcyan;
+  opacity: 50%;
+}
+
+/* Large Project Card */
+.my-cats {
+  width: 63vw;
+  height: 40vw;
+}
+
+.my-cats img {
+  width: 63vw;
+  height: 40vw;
+}
+
+/* Small Project Card */
+.small-card {
+  width: 30vw;
+  height: 20vw;
+}
+
+.small-card img {
+  width: 30vw;
+  height: 20vw;
+}
+
+.work h2 {
+  width: 35vh;
+  align-content: end;
+}
+
+.card h3,
+.work-titles {
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
+  color: darkcyan;
+  font-size: 20px;
+  background-color: cyan;
+  padding: 5px;
+  /* width: auto; */
+}
+
+.work-titles p {
+  display: inline-block;
+  position: absolute;
+  bottom: 5%x;
+  left: 2%;
+  color: darkcyan;
+  font-size: 12px;
+  background-color: cyan;
+  padding: 5px;
+}
+
+/* Left Section Titles Block */
+.horizontal-block {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  height: auto;
+}
+
+.h-block-title {
+  border-right: 5px solid darkcyan;
+  width: 25%;
+  text-align: right;
+  padding: 20px;
+  height: auto;
+  font-size: 25px;
+}
+
+/* Contact Block */
+.contact-links {
+  width: 61vw;
+  text-align: left;
+  padding: 20px;
+  height: auto;
+  font-size: 20px;
+} 
+.contact-block ul {
+  justify-content: space-between;
+  display: flex;
+  height: 100%;
+  color: #025555;
+}
+.contact-type {
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+
+/* Cards are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+  
+  .work {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
+    justify-content: start;
+    padding: 15px;
+  }
+  .work-examples {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-content: start;
+    padding: 0px;
+    width: 40vw;
+    height: 100%;
+  }
+  .card h3,
+  .work-titles {
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    color: darkcyan;
+    font-size: 20px;
+    background-color: cyan;
+    padding: 5px;
+    /* width: auto; */
+  }
+  .work-titles p {
+    display: inline-block;
+    position: absolute;
+    bottom: 5%x;
+    left: 2%;
+    color: darkcyan;
+    font-size: 12px;
+    background-color: cyan;
+    padding: 5px;
+  }
+  .horizontal-block {
+      display: flex;
+      flex-direction: column wrap;
+      width: 30%%;
+      height: auto;
+  }
+  .h-block-title {
+    display: inline-flex;
+    flex-direction: ;
+    border-right: 5px solid darkcyan;
+    width: 30vw;
+    text-align: right;
+    padding: 15px;
+    height: auto;
+    font-size: 15px;
+  }
+  .my-cats {
+  width: 50vw;
+  }
+  .small-card {
+  width: 50vw;
+  }
+  .contact-links {
+    width: 60vw;
+    text-align: left;
+    padding: 15px;
+    height: auto;
+    font-size: 15px;
+  } 
+  .contact-block ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #025555;
+  }
+
+@media screen and (max-width: 560px) {
+  
+  header h1 {
+    display: inline-block;
+    float: left;
+    color: cyan;
+    font-size: 30px;
+    position: relative;
+    align-items: center;
+    bottom: 50%%;
+  }
+  nav {
+    display: inline-flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-end;
+    float: right;
+    padding-top: 9px;
+    font-size: 13px;
+  }
+  header nav ul li {
+    display: inline-flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    margin: 5px;
+  }
+  header nav ul li a {
+    color: cyan;
+    font-size: 15px;
+  }
+  .work {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
+    justify-content: start;
+    padding: 15px;
+  }
+  .work-examples {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-content: start;
+    padding: 0px;
+    width: 40vw;
+    height: 100%;
+  }
+  .card h3,
+  .work-titles {
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    color: darkcyan;
+    font-size: 20px;
+    background-color: cyan;
+    padding: 5px;
+    /* width: auto; */
+  }
+  .work-titles p {
+    display: inline-block;
+    position: absolute;
+    bottom: 5%x;
+    left: 2%;
+    color: darkcyan;
+    font-size: 12px;
+    background-color: cyan;
+    padding: 5px;
+  }
+  .horizontal-block {
+      display: flex;
+      flex-direction: column wrap;
+      width: 30%%;
+      height: auto;
+  }
+  .h-block-title {
+    display: inline-flex;
+    flex-direction: ;
+    border-right: 5px solid darkcyan;
+    width: 30vw;
+    text-align: right;
+    padding: 15px;
+    height: auto;
+    font-size: 15px;
+  }
+  .my-cats {
+  width: 50vw;
+  }
+  .small-card {
+  width: 50vw;
+  }
+  .contact-links {
+    width: 60vw;
+    text-align: left;
+    padding: 15px;
+    height: auto;
+    font-size: 15px;
+  } 
+  .contact-block ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #025555;
+  }
+
+  
+
+
+
